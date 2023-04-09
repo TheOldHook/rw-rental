@@ -43,7 +43,7 @@ RegisterCommand("showdisp", function()
 end, false)
 
 RegisterNUICallback('rent', function(data, cb)
-    print(data.vehicleHash, data.vehiclePrice)
+    --print(data.vehicleHash, data.vehiclePrice)
     TriggerEvent('rw-rental:client:rent', data)
     SetDisplay(false)
     cb('ok')
@@ -95,6 +95,7 @@ CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
+    Wait(2000)
     for i=1, #Config.PedSpawn do
       local pedModel = "a_f_m_fatcult_01"
       local pedName = "Laila Toril"
@@ -107,7 +108,7 @@ Citizen.CreateThread(function()
         Wait(1)
       end
       
-      local ped = CreatePed(4, pedHash, pedCoords.x, pedCoords.y, pedCoords.z, pedHeading, false, true)
+      local ped = CreatePed(4, pedHash, pedCoords.x, pedCoords.y, pedCoords.z - 1.0, pedHeading, false, true)
       Wait(1000)
       SetEntityAsMissionEntity(ped, true, true)
       SetEntityInvincible(ped, true)
