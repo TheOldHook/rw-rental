@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    margin-top: 40px;
+  }
+  
+
+
+.rent-button {
+  margin-top: 400px;
+}
+
+.group h3 {
+  margin-bottom: 0rem; /* adjust the margin-bottom value as needed */
+}
+
+.group p {
+  color:#000;
+  margin-top: 0rem; /* adjust the margin-top value as needed */
+}
+
+.group h3:hover {
+  color: #000;
+  font-size: larger;
+}
+
+
+.info3-container {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+
+.card-container {
+  height: 600px; /* Set a fixed height for the container */
+  overflow-y: auto; /* Add overflow-y: auto to enable scrolling */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none;
+}
+
+.info-container {
+  background: linear-gradient(135deg, #4a5568, #9eb1c5);
+  padding: 1rem;
+}
+
+.info-container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: #4a5568;
+  transform: rotate(-45deg) translateX(0.5rem);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
