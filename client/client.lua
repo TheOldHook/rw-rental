@@ -73,7 +73,7 @@ AddEventHandler('rw-rental:client:openMenu', function()
 end)
 
 
--- Target para alugar veiculo
+-- QB-TARGET 
 CreateThread(function()
     exports['qb-target']:AddTargetModel(`a_f_m_fatcult_01`, {
         options = {
